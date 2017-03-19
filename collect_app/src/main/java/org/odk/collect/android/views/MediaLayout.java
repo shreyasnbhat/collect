@@ -143,7 +143,7 @@ public class MediaLayout extends RelativeLayout implements OnClickListener {
             Intent i = new Intent("android.intent.action.VIEW");
             i.setDataAndType(Uri.fromFile(videoFile), "video/*");
             if (i.resolveActivity(getContext().getPackageManager()) != null) {
-                ((Activity) getContext()).startActivity(i);
+                (getContext()).startActivity(i);
             } else {
                 ToastUtils.showShortToast(getContext().getString(R.string.activity_not_found, "view video"));
             }
